@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!--取别名-->
+    <typeAliases>
+        <package name="com.yfh.ssm.pojo"/>
+    </typeAliases>
+
+    <!--引入映射文件-->
+    <mappers>
+        <!--整个包的mapper文件-->
+        <!--<mapper resource="mappers/UserMapper.xml"/>-->
+        <package name="com.yfh.ssm.dao"/>
+    </mappers>
+</configuration>

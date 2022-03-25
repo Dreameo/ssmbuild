@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yfh.ssm.dao.BookDAO">
+
+    <!--int addBook(Book book)-->
+    <insert id="addBook" parameterType="Book">
+        INSERT INTO t_book VALUES(0, #{book.bookName}, #{book.bookCounts}, #{book.detail})
+    </insert>
+
+    <!--int deleteBookById(Integer bookId);-->
+    <delete id="deleteBookById" parameterType="Integer">
+        DELETE FROM t_book WHERE bookID = #{bookId}
+    </delete>
+
+    <!--int updateBook(Book book);-->
+    <update id="updateBook" parameterType="Book">
+        UPDATE t_book SET bookName = #{book.bookName}, bookCounts = #{book.bookCounts}, detail = #{book.detail} WHERE bookID = #{book.bookId}
+    </update>
+
+
+    <!--Book getBookById(Integer bookId);-->
+    <select id="getBookById" resultType="Book">
+        SELECT * FROM t_book WHERE bookID = #{bookId}
+    </select>
+
+    <!--List<Book> getAllBook();-->
+    <select id="getAllBook" resultType="Book">
+        SELECT * FROM t_book
+    </select>
+
+</mapper>
