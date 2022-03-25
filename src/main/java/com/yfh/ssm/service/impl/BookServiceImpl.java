@@ -16,22 +16,22 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public int addBook(Book book) {
-        return 0;
+        return bookDAO.addBook(book);
     }
 
     @Override
     public int deleteBookById(Integer bookId) {
-        return 0;
+        return bookDAO.deleteBookById(bookId);
     }
 
     @Override
     public int updateBook(Book book) {
-        return 0;
+        return bookDAO.updateBook(book);
     }
 
     @Override
     public Book getBookById(Integer bookId) {
-        return null;
+        return bookDAO.getBookById(bookId);
     }
 
     @Override

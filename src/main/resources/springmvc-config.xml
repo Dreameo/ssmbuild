@@ -45,6 +45,9 @@
     若只设置该标签，则只能访问静态资源，其他请求则无法访问
     此时必须设置<mvc:annotation-driven/>解决问题
    -->
+    <mvc:view-controller path="/" view-name="index"/>
+    <mvc:view-controller path="/book/toAdd" view-name="book/add"/>
+
     <mvc:default-servlet-handler/>
     <!-- 开启mvc注解驱动 -->
     <mvc:annotation-driven/>

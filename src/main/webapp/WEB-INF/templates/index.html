@@ -2,9 +2,15 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>测试</title>
+    <title>首页</title>
+    <link rel="stylesheet" th:href="@{/static/index.css}">
 </head>
 <body>
-<a th:href="@{/book/test}">发送请求测试</a>
+
+
+<h3>
+    <a th:href="@{/book/allBook}">点击进入列表页</a>
+</h3>
+
 </body>
 </html>
